@@ -79,3 +79,63 @@ searchInput.addEventListener('input', () => {
   });
 });
 
+// Dark Mode Toggle
+const toggleBtn = document.getElementById('theme-toggle');
+if (toggleBtn) {
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    toggleBtn.innerHTML = document.body.classList.contains('dark')
+      ? '<i class="fas fa-sun"></i>'
+      : '<i class="fas fa-moon"></i>';
+  });
+}
+
+// Wishlist Click Effect
+const wishlistBtns = document.querySelectorAll('.wishlist');
+wishlistBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    if (btn.classList.contains('active')) {
+      btn.style.color = "red";
+    } else {
+      btn.style.color = "black";
+    }
+  });
+});
+
+
+// Sidebar Toggle
+const menuToggle = document.getElementById('menu-toggle');
+const sidebar = document.querySelector('.sidebar');
+
+if (menuToggle) {
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+}
+
+// Floating Cart Logic
+const cartBtn = document.getElementById('cart');
+const cartPopup = document.getElementById('cart-popup');
+const cartItems = document.getElementById('cart-items');
+const cartCount = document.getElementById('cart-count');
+
+let cart = [];
+
+cartBtn.addEventListener('click', () => {
+  cartPopup.style.display = cartPopup.style.display === 'block' ? 'none' : 'block';
+});
+
+// Wishlist → Add to Cart
+wishlistBtns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    const flowerName = `Flower ${index + 1}`;
+    cart.push(flowerName);
+    cartCount.textContent = cart.length;
+    const li = document.createElement('li');
+    li.textContent = flowerName;
+    cartItems.appendChild(li);
+  });
+});
+
+

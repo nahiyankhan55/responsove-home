@@ -10,7 +10,6 @@
 </head>
 <body>
   <div class="container">
-
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="logo">Flower Shop</div>
@@ -26,6 +25,8 @@
         <a href="#">All gifts</a>
         <a href="#">Birthday gifts</a>
         <a href="#">Letterbox gifts</a>
+        <a href="#">Flowers gifts</a>
+
       </div>
       <div class="plan">
         <p>Get a plan</p>
@@ -36,13 +37,25 @@
     <!-- Main Content -->
     <main class="main">
 
+          <!-- Subscription Banner -->
+    <section class="subscribe-section">
+      <div class="overlay">
+        <h2>Join the colorful Bunch</h2>
+        <div class="subscribe-box">
+          <input type="email" placeholder="Write email" />
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </section>
+
       <!-- Topbar -->
       <header class="topbar">
-        <input type="text" placeholder="Search assets or start creating">
-        <div class="actions">
-        <button class="sale">August Sale <span>20% OFF</span></button>
-        </div>
-      </header>
+  <input type="text" placeholder="Search flowers or gifts">
+  <div class="actions">
+    <button class="sale">September Sale <span>50% OFF</span></button>
+    <!-- Dark Mode Button -->
+    <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+    </header>
 
       <!-- Quick Actions -->
       <div class="quick-actions">
@@ -121,6 +134,53 @@
       </section>
     </main>
   </div>
+<!-- Cards -->
+<section class="cards">
+  <div class="card" style="background-image: url('./assets/sample-flower-image.png');">
+    <h3>Explore Flower</h3>
+    <p>Find Your Choice</p>
+    <button class="wishlist"><i class="fas fa-heart"></i></button>
+  </div>
+  <div class="card" style="background-image: url('./assets/flower-store.png');">
+    <h3>Find More Flower Shop</h3>
+    <p>Lets Go!</p>
+    <button class="wishlist"><i class="fas fa-heart"></i></button>
+  </div>
+  <div class="card" style="background-image: url('./assets/flower-store.png');">
+    <h3>Find More Flower Shop</h3>
+    <p>Lets Go!</p>
+    <button class="wishlist"><i class="fas fa-heart"></i></button>
+  </div>
+  <div class="card" style="background-image: url('./assets/flower-store.png');">
+    <h3>Find More Flower Shop</h3>
+    <p>Lets Go!</p>
+    <button class="wishlist"><i class="fas fa-heart"></i></button>
+  </div>
+</section>
+
+<!-- Hamburger Button for Sidebar -->
+<button id="menu-toggle" class="hamburger"><i class="fas fa-bars"></i></button>
+
+<!-- Floating Cart -->
+<div id="cart" class="floating-cart">
+  <i class="fas fa-shopping-cart"></i>
+  <span id="cart-count">0</span>
+</div>
+
+<!-- Mini Cart Popup -->
+<div id="cart-popup" class="cart-popup">
+  <h3>Your Cart</h3>
+  <ul id="cart-items"></ul>
+  <button id="checkout-btn">Checkout</button>
+</div>
+
+<!-- Footer -->
+ <div class="footer-btn">
+  <footer class="footer">
+  <p>© 2025 Design Made By (Nahiyan Khan)</p>
+ </div>
+</footer>
+
   <script src="./scripts.js"></script>
 </body>
 </html>
