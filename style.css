@@ -18,7 +18,7 @@ body {
 /* Sidebar */
 .sidebar {
   width: 220px;
-  background: #fafafa;
+  background: #f1fff5;
   border-right: 1px solid #ddd;
   padding: 20px;
   display: flex;
@@ -47,11 +47,17 @@ body {
   margin-top: 30px;
 }
 
+.heading{
+    color: #047721;
+    font-size: 20px;
+    font-weight: 800;
+}
 .plan {
-  background: #f3f3f3;
+  background: #047721;
   padding: 10px;
   border-radius: 8px;
   margin-top: 20px;
+  color: rgb(255, 255, 255);
 }
 
 .plan p {
@@ -77,7 +83,7 @@ body {
 .topbar input {
   width: 60%;
   padding: 8px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #047721;
   border-radius: 8px;
 }
 
@@ -87,9 +93,13 @@ body {
   gap: 15px;
 }
 
+.btn-primary{
+color: #047721;
+}
+
 .sale {
-  background: #000;
-  color: #fff;
+  background: #047721;
+  color: #ffffff;
   border: none;
   padding: 8px 12px;
   border-radius: 20px;
@@ -120,7 +130,7 @@ body {
 }
 
 .quick-actions button {
-  background: #f5f5f5;
+  background: #f1fff5;
   border: 1px solid #ddd;
   padding: 8px 12px;
   border-radius: 8px;
@@ -149,22 +159,23 @@ body {
 
 /* Cards */
 .cards {
+  cursor: pointer;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
 }
 
 .card {
-  height: 220px;
-  border-radius: 12px;
-  padding: 15px;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+height: 220px;
+border-radius: 12px;
+padding: 15px;
+color: #fff;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+background-size: cover;
+background-position: center;
+box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .card h3 {
@@ -174,4 +185,63 @@ body {
 
 .card p {
   font-size: 13px;
+}
+
+/* Learn by doing */
+.learn {
+  margin-top: 40px;
+}
+
+.learn h2 {
+  color: #047721;
+  font-weight: 800;
+  margin-bottom: 15px
+}
+
+.learn-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.learn-tabs button {
+  background: #f1fff5;
+  border: 1px solid #ddd;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.learn-tabs .active {
+  background: #047721;
+  color: #fff;
+  border: none;
+}
+
+.learn-cards {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.learn-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f1fff5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.learn-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.learn-card p {
+  padding: 10px;
+  font-size: 14px;
 }
